@@ -10,3 +10,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Run `npm install` - or `yarn install` if yarn is available 
 * Run `npm start` - this will start the project on port 3000 
 
+## Screenshots
+
+### Character Menu
+![screenshot1](https://raw.githubusercontent.com/brosewarne/marvel-browser/master/screenshots/screenshot1.png)
+
+### Character Profile
+![screenshot2](https://raw.githubusercontent.com/brosewarne/marvel-browser/master/screenshots/screenshot2.png)
