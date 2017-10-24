@@ -4,13 +4,14 @@ import "./character.css";
 /**
  * Add the rendered CharacterTiles to a 3x3 grid
  * @param {Array} characterTiles - The array of rendered CharacterTiles
- * @returns {Node}
+ * @returns {Node} - The rendered CharacterGrid
  * @constructor
  */
 export const CharacterGrid = ({ characterTiles }) => {
     const rows = [];
     for (let i=0; i<characterTiles.length; i++) {
-        if (i%3 !== 0) {
+        if (i % 3 !== 0) {
+            // @todo: make characters per row a prop
             continue
         }
         rows.push(

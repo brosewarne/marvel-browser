@@ -12,7 +12,6 @@ export const CharacterImage = ({ character, imgSize="portrait_medium" }) => {
     const imageUrl = `${path}/${imgSize}.${extension}`;
     return (
         <picture>
-            <source srcSet={imageUrl} media="(min-width: 600px)" />
             <img src={imageUrl} alt={character.name} />
         </picture>
     )
