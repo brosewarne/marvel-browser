@@ -33,7 +33,8 @@ class CharacterMenu extends Component {
         const { startsWith, charactersPerPage, currentPage } = this.state;
         const offset = charactersPerPage * (currentPage-1);
         const query = `nameStartsWith=${startsWith}&limit=${charactersPerPage}&offset=${offset}`;
-        characterSearch(query, (response) => {
+        // @todo handle AJAX request errors here
+        characterSearch(query).then((response) => {
             this.setState({
                 loading: false,
                 characters: response.data.results,
