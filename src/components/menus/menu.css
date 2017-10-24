@@ -1,0 +1,33 @@
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+/*.menuTile {*/
+    /*display: flex;*/
+    /*border-style: solid;*/
+    /*font-size: 1.5rem;*/
+    /*padding: 0.1rem;*/
+    /*margin: 0.1rem;*/
+    /*cursor: pointer;*/
+/*}*/
+
+.menuTile {
+    background: #3498db;
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    border-radius: 29px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+}
+
+.menuTile:hover {
+    background: #3cb0fd;
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}

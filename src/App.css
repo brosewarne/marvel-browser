@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #222;
+  height: 80px;
+  padding: 10px;
+  color: white;
+}
+
+.App-title {
+  font-family: "AmericanCaptain";
+  font-weight: normal;
+  font-size: 3rem;
+}
+
