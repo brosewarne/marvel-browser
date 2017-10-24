@@ -20,7 +20,8 @@ class CharacterMenu extends Component {
             characters: [],
             totalCharacters: 0,
             charactersPerPage: 9,
-            currentPage: 1
+            currentPage: 1,
+            totalPages: 0
         }
     }
 
@@ -36,7 +37,8 @@ class CharacterMenu extends Component {
             this.setState({
                 loading: false,
                 characters: response.data.results,
-                totalCharacters: response.data.total
+                totalCharacters: response.data.total,
+                totalPages: Math.ceil(response.data.total / this.state.charactersPerPage)
             })
         })
     };
@@ -61,13 +63,21 @@ class CharacterMenu extends Component {
      * @returns {Node} - The rendered PaginationMenu
      */
     getPaginationMenu = () => {
-        const { totalCharacters, charactersPerPage, currentPage, startsWith } = this.state;
+        const { totalPages, startsWith } = this.state;
         return <PaginationMenu
-            totalCharacters={totalCharacters}
-            charactersPerPage={charactersPerPage}
-            currentPage={currentPage}
+            totalPages={totalPages}
             startsWith={startsWith}
         />
+    };
+
+    /**
+     * Get the pagination details for display - eg Page 1 of 10
+     * @returns {Node} - The pagination details
+     */
+    getPaginationDetails = () => {
+        return (
+            <strong>Page {this.state.currentPage} of {this.state.totalPages}</strong>
+        )
     };
 
     /**
@@ -99,7 +109,9 @@ class CharacterMenu extends Component {
                 <h1>
                     LOADING CHARACTERS.....
                 </h1>
-                {loading}
+                <div>
+                    <img src={loading} className='loadingSpinner' alt='loading' />
+                </div>
             </div>
         )
     };
@@ -123,6 +135,7 @@ class CharacterMenu extends Component {
                     {this.getAlphabetMenu()}
                 </section>
                 <content>
+                    {this.getPaginationDetails()}
                     {this.getCharacterGrid()}
                     {this.getPaginationMenu()}
                 </content>

@@ -1,17 +1,16 @@
-.App {
+.app {
   text-align: center;
 }
 
-.App-header {
+.appHeader {
   background-color: #222;
   height: 80px;
   padding: 10px;
   color: white;
 }
 
-.App-title {
+.appTitle {
   font-family: "AmericanCaptain";
   font-weight: normal;
   font-size: 3rem;
 }
-

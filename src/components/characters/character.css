@@ -35,6 +35,9 @@
 }
 
 .characterTile {
+    flex-flow: column nowrap;
+    display: flex;
+    flex: 4;
     margin: 1rem;
     user-select: none;
     border-radius: 0.7rem;
@@ -69,4 +72,13 @@
     background: linear-gradient(135deg, #fff, #fafafa);
     padding: 0 2rem 2rem;
     transition: box-shadow 0.3s ease-in-out;
+}
+
+.loadingSpinner {
+    width: 200px;
+    height: 200px;
+}
+@keyframes loadingSpinner {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
