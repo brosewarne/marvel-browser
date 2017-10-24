@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Route } from "react-router-dom"
+import { Route, Link } from "react-router-dom"
 import { Redirect, Switch } from "react-router"
 
 import { CharacterMenu } from "./components/characters/character_menu";
@@ -13,12 +13,14 @@ class App extends Component {
         return (
             <div className="app">
                 <header className="appHeader">
-                    <h1 className="appTitle">Marvel Character Browser</h1>
+                    <Link to="/characters/A/1">
+                        <h1 className="appTitle">Marvel Character Browser</h1>
+                    </Link>
                 </header>
 
                 <Switch>
-                    <Route exact path="/"><Redirect to="/A/1" /></Route>
-                    <Route exact path="/:startsWith/:currentPage" component={CharacterMenu} />
+                    <Route exact path="/"><Redirect to="/characters/A/1" /></Route>
+                    <Route exact path="/characters/:startsWith/:currentPage" component={CharacterMenu} />
                 </Switch>
                 <Route path="/character/:id" component={CharacterPage} />
 

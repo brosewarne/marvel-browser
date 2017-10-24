@@ -11,10 +11,10 @@ import "./menu.css";
 export const AlphabetMenu = () => {
     const alphabet = "3ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
-    const alphabetTiles = alphabet.map((character) => {
+    const alphabetTiles = alphabet.map((letter) => {
         return (
-            <div className="menuTile" key={`alphabet_${character}_div`}>
-                <Link to={`/${character}/1`} key={`alphabet_${character}`}>{character}</Link>
+            <div className="menuTile" key={`alphabet_${letter}_div`}>
+                <Link to={`/characters/${letter}/1`} key={`alphabet_${letter}`}>{letter}</Link>
             </div>
         )});
     return (

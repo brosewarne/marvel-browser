@@ -15,7 +15,7 @@ export const PaginationMenu = ({ totalPages, startsWith }) => {
     for (let i = 0; i < totalPages; i++) {
         pageTiles.push(
             <div className="menuTile"  key={`pagination_div_${i}`}>
-                <Link to={`/${startsWith}/${i+1}`} key={`pagination_${i}`}>{i + 1}</Link>
+                <Link to={`/characters/${startsWith}/${i+1}`} key={`pagination_${i}`}>{i + 1}</Link>
             </div>
         )
     }
