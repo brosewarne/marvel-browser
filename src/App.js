@@ -15,9 +15,11 @@ class App extends Component {
                 <header className="App-header">
                     <h1 className="App-title">Marvel Character Browser</h1>
                 </header>
+
                 <Route exact path="/"><Redirect to="/A/1" /></Route>
                 <Route path="/:startsWith/:currentPage" component={CharacterMenu} />
                 <Route path="/character/:id" component={CharacterPage} />
+
             </div>
         );
     }

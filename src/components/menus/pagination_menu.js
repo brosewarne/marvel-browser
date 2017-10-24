@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import "./menu.css";
 
 /**
- * Create a pagination menu for navigating through each set of characters.
+ * Render a PaginationMenu for navigating through each set of characters.
  * @returns {Node|null} - The pagination menu, or null if no characters have been loaded.
  */
 export const PaginationMenu = ({ totalCharacters, charactersPerPage, currentPage, startsWith }) => {

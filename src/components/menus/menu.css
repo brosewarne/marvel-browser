@@ -3,7 +3,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
 /*.menuTile {*/
@@ -18,11 +18,18 @@
 .menuTile {
     background: #3498db;
     background-image: linear-gradient(to bottom, #3498db, #2980b9);
-    border-radius: 29px;
+    border-radius: 0.7rem;
     font-family: Arial;
     color: #ffffff;
     font-size: 20px;
     padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    margin: 0 0.1rem;
+    min-width: 20px;
+}
+
+
+.menuTile a {
     text-decoration: none;
 }
 

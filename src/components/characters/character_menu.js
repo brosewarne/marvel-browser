@@ -19,14 +19,14 @@ class CharacterMenu extends Component {
             startsWith: "A",
             characters: [],
             totalCharacters: 0,
-            curentCharacter: null,
             charactersPerPage: 9,
             currentPage: 1
         }
     }
 
     /**
-     * Get the data for the set of characters based on `startsWith`, `currentPage` and `charactersPerPage`
+     * Get the data for the set of characters based on `startsWith`, `currentPage` and `charactersPerPage` and set
+     * the character list and total characters to internal state
      */
     getCharacterData = () => {
         const { startsWith, charactersPerPage, currentPage } = this.state;
@@ -48,10 +48,18 @@ class CharacterMenu extends Component {
         this.setState({ ...this.props.match.params }, this.getCharacterData)
     };
 
+    /**
+     * Update the set of character data when the route changes
+     * @param nextProps
+     */
     componentWillReceiveProps = (nextProps) => {
         this.setState({ ...nextProps.match.params }, this.getCharacterData);
     };
 
+    /**
+     * Get the pagination menu for the current set of characters
+     * @returns {Node} - The rendered PaginationMenu
+     */
     getPaginationMenu = () => {
         const { totalCharacters, charactersPerPage, currentPage, startsWith } = this.state;
         return <PaginationMenu
@@ -64,7 +72,7 @@ class CharacterMenu extends Component {
 
     /**
      * Return an alphabet menu for viewing characters that start with each letter of the alphabet
-     * @returns {Node} - The alphabet menu
+     * @returns {Node} - The rendered AlphabetMenu
      */
     getAlphabetMenu = () => {
         return <AlphabetMenu dispatch={this.props.dispatch} />
@@ -73,11 +81,11 @@ class CharacterMenu extends Component {
 
     /**
      * Create a set of character tiles for the current set of characters.
-     * @returns {Array} - The array of character tiles
+     * @returns {Array} - The array of rendered CharacterTiles
      */
     getCharacterTiles = () => {
         return this.state.characters.map((character) => {
-            return <CharacterTile character={character} />
+            return <CharacterTile character={character} key={`character_tile_${character.id}`}/>
         })
     };
 
