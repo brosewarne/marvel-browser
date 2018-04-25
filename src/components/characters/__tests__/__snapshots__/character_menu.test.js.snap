@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CharacterMenu /> renders the loaded page correctly 1`] = `
+<div>
+  <section>
+    <Component
+      dispatch={[MockFunction]}
+    />
+  </section>
+  <content>
+    <strong>
+      Page 
+      1
+       of 
+      10
+    </strong>
+    <Component
+      characterTiles={
+        Array [
+          <Unknown
+            character={
+              Object {
+                "id": 0,
+                "name": "Character_0",
+                "thumbnail": Object {
+                  "extension": "png",
+                  "path": "/a/href/to/an/image",
+                },
+              }
+            }
+          />,
+          <Unknown
+            character={
+              Object {
+                "id": 1,
+                "name": "Character_1",
+                "thumbnail": Object {
+                  "extension": "png",
+                  "path": "/a/href/to/an/image",
+                },
+              }
+            }
+          />,
+          <Unknown
+            character={
+              Object {
+                "id": 2,
+                "name": "Character_2",
+                "thumbnail": Object {
+                  "extension": "png",
+                  "path": "/a/href/to/an/image",
+                },
+              }
+            }
+          />,
+          <Unknown
+            character={
+              Object {
+                "id": 3,
+                "name": "Character_3",
+                "thumbnail": Object {
+                  "extension": "png",
+                  "path": "/a/href/to/an/image",
+                },
+              }
+            }
+          />,
+          <Unknown
+            character={
+              Object {
+                "id": 4,
+                "name": "Character_4",
+                "thumbnail": Object {
+                  "extension": "png",
+                  "path": "/a/href/to/an/image",
+                },
+              }
+            }
+          />,
+          <Unknown
+            character={
+              Object {
+                "id": 5,
+                "name": "Character_5",
+                "thumbnail": Object {
+                  "extension": "png",
+                  "path": "/a/href/to/an/image",
+                },
+              }
+            }
+          />,
+          <Unknown
+            character={
+              Object {
+                "id": 6,
+                "name": "Character_6",
+                "thumbnail": Object {
+                  "extension": "png",
+                  "path": "/a/href/to/an/image",
+                },
+              }
+            }
+          />,
+          <Unknown
+            character={
+              Object {
+                "id": 7,
+                "name": "Character_7",
+                "thumbnail": Object {
+                  "extension": "png",
+                  "path": "/a/href/to/an/image",
+                },
+              }
+            }
+          />,
+          <Unknown
+            character={
+              Object {
+                "id": 8,
+                "name": "Character_8",
+                "thumbnail": Object {
+                  "extension": "png",
+                  "path": "/a/href/to/an/image",
+                },
+              }
+            }
+          />,
+          <Unknown
+            character={
+              Object {
+                "id": 9,
+                "name": "Character_9",
+                "thumbnail": Object {
+                  "extension": "png",
+                  "path": "/a/href/to/an/image",
+                },
+              }
+            }
+          />,
+        ]
+      }
+    />
+    <Component
+      startsWith="A"
+      totalPages={10}
+    />
+  </content>
+</div>
+`;
+
+exports[`<CharacterMenu /> renders the loading spinner correctly 1`] = `
+<div>
+  <section>
+    <Component
+      dispatch={[MockFunction]}
+    />
+  </section>
+  <content>
+    <strong>
+      Page 
+      1
+       of 
+      0
+    </strong>
+    <div>
+      <h1>
+        LOADING CHARACTERS.....
+      </h1>
+      <div>
+        <img
+          alt="loading"
+          className="loadingSpinner"
+          src="loading.svg"
+        />
+      </div>
+    </div>
+    <Component
+      startsWith="A"
+      totalPages={0}
+    />
+  </content>
+</div>
+`;

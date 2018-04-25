@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CharacterTile /> renders correctly 1`] = `
+<div
+  className="characterTile"
+  key="1009146_tile"
+>
+  <h1
+    className="characterTitle"
+  >
+    Abomination
+  </h1>
+  <Link
+    href="/character/1009146"
+    replace={false}
+    title="Click to see Abomination's profile"
+    to={
+      Object {
+        "pathname": "/character/1009146",
+        "state": Object {
+          "character": Object {
+            "id": 1009146,
+            "name": "Abomination",
+            "thumbnail": Object {
+              "extension": "png",
+              "path": "/a/href/to/an/image",
+            },
+          },
+        },
+      }
+    }
+  >
+    <Component
+      character={
+        Object {
+          "id": 1009146,
+          "name": "Abomination",
+          "thumbnail": Object {
+            "extension": "png",
+            "path": "/a/href/to/an/image",
+          },
+        }
+      }
+      imgSize="portrait_medium"
+    />
+  </Link>
+</div>
+`;

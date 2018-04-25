@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CharacterTile /> renders correctly 1`] = `
+<picture>
+  <img
+    alt="Abomination"
+    src="/a/href/to/an/image/portrait_medium.png"
+  />
+</picture>
+`;

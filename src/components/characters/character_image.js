@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 /**
  *
@@ -7,12 +8,17 @@ import React from "react";
  * @returns {Node} - The rendered CharacterImage
  * @constructor
  */
-export const CharacterImage = ({ character, imgSize="portrait_medium" }) => {
+export const CharacterImage = ({ character, imgSize = 'portrait_medium' }) => {
     const { path, extension } = character.thumbnail;
     const imageUrl = `${path}/${imgSize}.${extension}`;
     return (
         <picture>
             <img src={imageUrl} alt={character.name} />
         </picture>
-    )
+    );
+};
+
+CharacterImage.propTypes = {
+    character: PropTypes.object.isRequired,
+    imgSize: PropTypes.string.isRequired
 };

@@ -11,7 +11,7 @@ export const characterSearch = (query, cb) => {
     const baseUrl = 'https://gateway.marvel.com:443/v1/public/characters';
     const url = `${baseUrl}?${query}&apikey=${apiKey}`;
     return fetch(url, {
-        accept: "application/json"
+        accept: 'application/json'
     })
         .then(checkStatus)
         .then(response => response.json());
@@ -24,7 +24,7 @@ export const characterSearch = (query, cb) => {
  * @throws {Error} - An error with the status and response if the status code is not a 20X or 30X
  */
 const checkStatus = (response) => {
-    if (response.status >= 200 && response.status < 300) {
+    if (response.status >= 200 && response.status <= 302) {
         return response;
     }
     const error = new Error(`HTTP Error ${response.statusText}`);

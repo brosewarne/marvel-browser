@@ -1,8 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom"
-import { CharacterImage } from "./character_image";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import { CharacterImage } from './character_image';
 
-import "./character.css";
+import './character.css';
 
 /**
  * Render a single CharacterTile
@@ -11,17 +12,24 @@ import "./character.css";
  * @returns {Node} - The rendered CharacterTile
  * @constructor
  */
-export const CharacterTile = ({ character, imgSize="portrait_medium" }) => {
-    const characterImage = <CharacterImage imgSize={imgSize} character={character} />
+export const CharacterTile = ({ character, imgSize = 'portrait_medium' }) => {
+    const characterImage = <CharacterImage imgSize={imgSize} character={character} />;
+    const href = `/character/${character.id}`;
     return (
         <div className="characterTile" key={`${character.id}_tile`}>
             <h1 className="characterTitle">{character.name}</h1>
             <Link
-                to={{pathname: `/character/${character.id}`, state:{character: character}}}
+                href={href}
+                to={{ pathname: href, state: { character } }}
                 title={`Click to see ${character.name}'s profile`}
             >
                 {characterImage}
             </Link>
         </div>
-    )
+    );
+};
+
+CharacterTile.propTypes = {
+    character: PropTypes.object.isRequired,
+    imgSize: PropTypes.string.isRequired
 };

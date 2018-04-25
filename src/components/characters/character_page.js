@@ -1,7 +1,9 @@
-import React from "react";
-import { CharacterImage } from "./character_image";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import "./character.css";
+import { CharacterImage } from './character_image';
+
+import './character.css';
 
 /**
  * Render the CharacterPage, showing a profile pof the selected character
@@ -11,14 +13,16 @@ import "./character.css";
  */
 export const CharacterPage = (props) => {
     const { character } = props.location.state;
-    const { name, description, comics, series, stories } = character;
+    const {
+        name, description, comics, series, stories
+    } = character;
 
     return (
         <div>
             <content className="characterPage">
                 <div className="characterProfile">
                     <h1 className="characterProfileTitle">{name}</h1>
-                    <CharacterImage character={character} imgSize={"portrait_uncanny"} />
+                    <CharacterImage character={character} imgSize="portrait_uncanny" />
                     <p>{description || 'No character description available'}</p>
                     <p>{`${comics.available} Comics`}</p>
                     <p>{`${series.available} Series`}</p>
@@ -26,6 +30,9 @@ export const CharacterPage = (props) => {
                 </div>
             </content>
         </div>
-    )
+    );
 };
 
+CharacterPage.propTypes = {
+    location: PropTypes.object.isRequired
+};

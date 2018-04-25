@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom"
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import "./menu.css";
+import './menu.css';
 
 /**
  * Render the AlphabetMenu - used for selecting a new `startsWith` letter.
@@ -9,17 +9,19 @@ import "./menu.css";
  * @constructor
  */
 export const AlphabetMenu = () => {
-    const alphabet = "3ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+    const alphabet = '3ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
     const alphabetTiles = alphabet.map((letter) => {
+        const href = `/characters/${letter}/1`;
         return (
             <div className="menuTile" key={`alphabet_${letter}_div`}>
-                <Link to={`/characters/${letter}/1`} key={`alphabet_${letter}`}>{letter}</Link>
+                <Link href={href} to={href} key={`alphabet_${letter}`}>{letter}</Link>
             </div>
-        )});
+        );
+    });
     return (
-        <div className={"menu"}>
+        <div className="menu">
             {alphabetTiles}
         </div>
-    )
+    );
 };

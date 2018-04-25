@@ -1,28 +1,33 @@
-import React, {Component} from "react";
-import "./character.css";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import { characterSearch } from "../api";
-import { CharacterTile } from "./character_tile";
-import { CharacterGrid } from "./character_grid";
-import { PaginationMenu } from "../menus/pagination_menu";
-import { AlphabetMenu } from "../menus/alphabet_menu";
+import { characterSearch } from '../../api/api';
+import { CharacterTile } from './character_tile';
+import { CharacterGrid } from './character_grid';
+import { PaginationMenu } from '../menus/pagination_menu';
+import { AlphabetMenu } from '../menus/alphabet_menu';
 
-import loading from "./loading.svg";
+import './character.css';
+import loading from './loading.svg';
 
 class CharacterMenu extends Component {
+    static propTypes = {
+        match: PropTypes.object.isRequired,
+        dispatch: PropTypes.func.isRequired
+    };
 
     constructor(props) {
         super(props);
 
         this.state = {
             loading: true,
-            startsWith: "A",
+            startsWith: 'A',
             characters: [],
-            totalCharacters: 0,
+            // totalCharacters: 0,
             charactersPerPage: 9,
             currentPage: 1,
             totalPages: 0
-        }
+        };
     }
 
     /**
@@ -31,29 +36,29 @@ class CharacterMenu extends Component {
      */
     getCharacterData = () => {
         const { startsWith, charactersPerPage, currentPage } = this.state;
-        const offset = charactersPerPage * (currentPage-1);
+        const offset = charactersPerPage * (currentPage - 1);
         const query = `nameStartsWith=${startsWith}&limit=${charactersPerPage}&offset=${offset}`;
         // @todo handle AJAX request errors here
         characterSearch(query).then((response) => {
             this.setState({
                 loading: false,
                 characters: response.data.results,
-                totalCharacters: response.data.total,
+                // totalCharacters: response.data.total,
                 totalPages: Math.ceil(response.data.total / this.state.charactersPerPage)
-            })
-        })
+            });
+        });
     };
 
     /**
      * Get the initial set of character data when the page mounts.
      */
     componentWillMount = () => {
-        this.setState({ ...this.props.match.params }, this.getCharacterData)
+        this.setState({ ...this.props.match.params }, this.getCharacterData);
     };
 
     /**
      * Update the set of character data when the route changes
-     * @param nextProps
+     * @param {Object} nextProps - The incoming set of props
      */
     componentWillReceiveProps = (nextProps) => {
         this.setState({ ...nextProps.match.params }, this.getCharacterData);
@@ -65,10 +70,12 @@ class CharacterMenu extends Component {
      */
     getPaginationMenu = () => {
         const { totalPages, startsWith } = this.state;
-        return <PaginationMenu
-            totalPages={totalPages}
-            startsWith={startsWith}
-        />
+        return (
+            <PaginationMenu
+                totalPages={totalPages}
+                startsWith={startsWith}
+            />
+        );
     };
 
     /**
@@ -78,7 +85,7 @@ class CharacterMenu extends Component {
     getPaginationDetails = () => {
         return (
             <strong>Page {this.state.currentPage} of {this.state.totalPages}</strong>
-        )
+        );
     };
 
     /**
@@ -86,8 +93,7 @@ class CharacterMenu extends Component {
      * @returns {Node} - The rendered AlphabetMenu
      */
     getAlphabetMenu = () => {
-        return <AlphabetMenu dispatch={this.props.dispatch} />
-
+        return <AlphabetMenu dispatch={this.props.dispatch} />;
     };
 
     /**
@@ -96,8 +102,8 @@ class CharacterMenu extends Component {
      */
     getCharacterTiles = () => {
         return this.state.characters.map((character) => {
-            return <CharacterTile character={character} key={`character_tile_${character.id}`}/>
-        })
+            return <CharacterTile character={character} key={`character_tile_${character.id}`} />;
+        });
     };
 
     /**
@@ -111,10 +117,10 @@ class CharacterMenu extends Component {
                     LOADING CHARACTERS.....
                 </h1>
                 <div>
-                    <img src={loading} className='loadingSpinner' alt='loading' />
+                    <img src={loading} className="loadingSpinner" alt="loading" />
                 </div>
             </div>
-        )
+        );
     };
 
     /**

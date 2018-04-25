@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CharacterGrid /> renders correctly 1`] = `
+<div
+  className="characterGrid"
+>
+  <div
+    className="characterRow"
+    key="characterRow_0"
+  >
+    <span
+      key="c1"
+    >
+      Character 1
+    </span>
+    <span
+      key="c2"
+    >
+      Character 2
+    </span>
+    <span
+      key="c3"
+    >
+      Character 3
+    </span>
+  </div>
+  <div
+    className="characterRow"
+    key="characterRow_3"
+  >
+    <span
+      key="c4"
+    >
+      Character 4
+    </span>
+    <span
+      key="c5"
+    >
+      Character 5
+    </span>
+    <span
+      key="c6"
+    >
+      Character 6
+    </span>
+  </div>
+  <div
+    className="characterRow"
+    key="characterRow_6"
+  >
+    <span
+      key="c7"
+    >
+      Character 7
+    </span>
+    <span
+      key="c8"
+    >
+      Character 8
+    </span>
+    <span
+      key="c9"
+    >
+      Character 9
+    </span>
+  </div>
+  <div
+    className="characterRow"
+    key="characterRow_9"
+  >
+    <span
+      key="c10"
+    >
+      Character 10
+    </span>
+  </div>
+</div>
+`;
