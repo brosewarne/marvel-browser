@@ -27,7 +27,7 @@ describe('<CharacterPage />', () => {
         }
     };
     it('renders correctly', () => {
-        const location = { state: { character: mockCharacter } };
+        const location = { state: { data: mockCharacter } };
         const wrapper = shallow(
             <CharacterPage location={location} />
         );

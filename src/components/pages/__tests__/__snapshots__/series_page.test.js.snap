@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SeriesPage /> renders correctly 1`] = `
+<div>
+  <content
+    className="pageContainer"
+  >
+    <div
+      className="itemProfile"
+    >
+      <h1
+        className="itemProfileTitle"
+      >
+        Series Title
+      </h1>
+      <Component
+        imgSize="portrait_uncanny"
+        item={
+          Object {
+            "characters": Object {
+              "available": 2,
+            },
+            "comics": Object {
+              "available": 10,
+            },
+            "description": "Series Description",
+            "endYear": "2000",
+            "startYear": "1990",
+            "stories": Object {
+              "available": 5,
+            },
+            "thumbnail": Object {
+              "extension": "png",
+              "path": "/a/href/to/an/image",
+            },
+            "title": "Series Title",
+            "type": "Series Type",
+          }
+        }
+      />
+      <p>
+        Series Description
+      </p>
+      <p>
+        Type: 
+        Series Type
+      </p>
+      <p>
+        Start Year: 
+        1990
+      </p>
+      <p>
+        End Year: 
+        2000
+      </p>
+      <p>
+        2 Characters
+      </p>
+      <p>
+        10 Comics
+      </p>
+      <p>
+        5 Stories
+      </p>
+    </div>
+  </content>
+</div>
+`;

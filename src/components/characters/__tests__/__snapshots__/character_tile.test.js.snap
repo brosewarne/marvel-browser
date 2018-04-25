@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CharacterTile /> renders correctly 1`] = `
-<div
+<WithStyles(Paper)
   className="characterTile"
   key="1009146_tile"
+  zDepth={4}
 >
   <h1
     className="characterTitle"
@@ -31,7 +32,8 @@ exports[`<CharacterTile /> renders correctly 1`] = `
     }
   >
     <Component
-      character={
+      imgSize="portrait_medium"
+      item={
         Object {
           "id": 1009146,
           "name": "Abomination",
@@ -41,8 +43,7 @@ exports[`<CharacterTile /> renders correctly 1`] = `
           },
         }
       }
-      imgSize="portrait_medium"
     />
   </Link>
-</div>
+</WithStyles(Paper)>
 `;

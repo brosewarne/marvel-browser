@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ComicPage /> renders correctly 1`] = `
+<div>
+  <content
+    className="pageContainer"
+  >
+    <div
+      className="itemProfile"
+    >
+      <h1
+        className="itemProfileTitle"
+      >
+        Comic Title
+      </h1>
+      <Component
+        imgSize="portrait_uncanny"
+        item={
+          Object {
+            "description": "Comic Description",
+            "thumbnail": Object {
+              "extension": "png",
+              "path": "/a/href/to/an/image",
+            },
+            "title": "Comic Title",
+          }
+        }
+      />
+      <p>
+        Comic Description
+      </p>
+    </div>
+  </content>
+</div>
+`;

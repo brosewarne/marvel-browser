@@ -4,9 +4,11 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
 <div
   className="menu"
 >
-  <div
-    className="menuTile"
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_3_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/3/1"
@@ -16,10 +18,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       3
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_A_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/A/1"
@@ -29,10 +33,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       A
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_B_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/B/1"
@@ -42,10 +48,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       B
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_C_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/C/1"
@@ -55,10 +63,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       C
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_D_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/D/1"
@@ -68,10 +78,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       D
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_E_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/E/1"
@@ -81,10 +93,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       E
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_F_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/F/1"
@@ -94,10 +108,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       F
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_G_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/G/1"
@@ -107,10 +123,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       G
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_H_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/H/1"
@@ -120,10 +138,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       H
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_I_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/I/1"
@@ -133,10 +153,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       I
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_J_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/J/1"
@@ -146,10 +168,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       J
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_K_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/K/1"
@@ -159,10 +183,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       K
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_L_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/L/1"
@@ -172,10 +198,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       L
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_M_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/M/1"
@@ -185,10 +213,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       M
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_N_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/N/1"
@@ -198,10 +228,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       N
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_O_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/O/1"
@@ -211,10 +243,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       O
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_P_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/P/1"
@@ -224,10 +258,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       P
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_Q_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/Q/1"
@@ -237,10 +273,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       Q
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_R_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/R/1"
@@ -250,10 +288,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       R
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_S_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/S/1"
@@ -263,10 +303,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       S
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_T_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/T/1"
@@ -276,10 +318,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       T
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_U_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/U/1"
@@ -289,10 +333,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       U
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_V_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/V/1"
@@ -302,10 +348,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       V
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_W_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/W/1"
@@ -315,10 +363,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       W
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_X_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/X/1"
@@ -328,10 +378,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       X
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_Y_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/Y/1"
@@ -341,10 +393,12 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       Y
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="alphabet_Z_div"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/Z/1"
@@ -354,6 +408,6 @@ exports[`<AlphabetMenu /> renders correctly 1`] = `
     >
       Z
     </Link>
-  </div>
+  </WithStyles(Button)>
 </div>
 `;

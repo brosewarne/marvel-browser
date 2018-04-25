@@ -1,28 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { CharacterImage } from './character_image';
+import { ItemImage } from '../items/item_image';
 
-import './character.css';
+import './pages.css';
 
 /**
- * Render the CharacterPage, showing a profile pof the selected character
+ * Render the CharacterPage, showing a profile of the selected character
  * @param {Object} props - The set of props for the CharacterPage - passed from the route
  * @returns {Node} - The rendered CharacterPage
  * @constructor
  */
 export const CharacterPage = (props) => {
-    const { character } = props.location.state;
+    const { data } = props.location.state;
     const {
         name, description, comics, series, stories
-    } = character;
+    } = data;
 
     return (
         <div>
-            <content className="characterPage">
-                <div className="characterProfile">
-                    <h1 className="characterProfileTitle">{name}</h1>
-                    <CharacterImage character={character} imgSize="portrait_uncanny" />
+            <content className="pageContainer">
+                <div className="itemProfile">
+                    <h1 className="itemProfileTitle">{name}</h1>
+                    <ItemImage item={data} imgSize="portrait_uncanny" />
                     <p>{description || 'No character description available'}</p>
                     <p>{`${comics.available} Comics`}</p>
                     <p>{`${series.available} Series`}</p>

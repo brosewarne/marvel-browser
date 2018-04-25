@@ -3,23 +3,23 @@ import { Route, Link } from 'react-router-dom';
 import { Redirect, Switch } from 'react-router';
 
 import { CharacterMenu } from './components/characters/character_menu';
-import { CharacterPage } from './components/characters/character_page';
+import { CharacterPage } from './components/pages/character_page';
+import { HomePage } from './components/pages/home';
+import { Header } from './components/header/header';
 
 import './App.css';
 
 class App extends Component {
     render() {
-        const href = '/characters/A/1';
         return (
             <div className="app">
-                <header className="appHeader">
-                    <Link to={href} href={href}>
-                        <h1 className="appTitle">Marvel Character Browser</h1>
-                    </Link>
-                </header>
+                <Header />
                 <Switch>
-                    <Route exact path="/"><Redirect to="/characters/A/1" /></Route>
+                    <Route exact path="/" component={HomePage} />
                     <Route exact path="/characters/:startsWith/:currentPage" component={CharacterMenu} />
+                    <Route exact path="/characters/random" render={ () => <HomePage featureType="characters" /> } />
+                    <Route exact path="/comics/random" render={ () => <HomePage featureType="comics" /> } />
+                    <Route exact path="/series/random" render={ () => <HomePage featureType="series" /> } />
                 </Switch>
                 <Route path="/character/:id" component={CharacterPage} />
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { characterSearch } from '../../api/api';
+import { characterSearchStartsWith } from '../../api/api';
 import { CharacterTile } from './character_tile';
 import { CharacterGrid } from './character_grid';
 import { PaginationMenu } from '../menus/pagination_menu';
@@ -39,7 +39,7 @@ class CharacterMenu extends Component {
         const offset = charactersPerPage * (currentPage - 1);
         const query = `nameStartsWith=${startsWith}&limit=${charactersPerPage}&offset=${offset}`;
         // @todo handle AJAX request errors here
-        characterSearch(query).then((response) => {
+        characterSearchStartsWith(query).then((response) => {
             this.setState({
                 loading: false,
                 characters: response.data.results,

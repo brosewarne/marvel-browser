@@ -2,15 +2,3 @@
   text-align: center;
 }
 
-.appHeader {
-  background-color: #222;
-  height: 80px;
-  padding: 10px;
-  color: white;
-}
-
-.appTitle {
-  font-family: "AmericanCaptain";
-  font-weight: normal;
-  font-size: 3rem;
-}

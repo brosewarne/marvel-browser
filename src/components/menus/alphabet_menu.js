@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from 'material-ui/Button';
 
 import './menu.css';
 
@@ -14,9 +15,9 @@ export const AlphabetMenu = () => {
     const alphabetTiles = alphabet.map((letter) => {
         const href = `/characters/${letter}/1`;
         return (
-            <div className="menuTile" key={`alphabet_${letter}_div`}>
+            <Button variant="raised" color="primary" size="small" key={`alphabet_${letter}_div`}>
                 <Link href={href} to={href} key={`alphabet_${letter}`}>{letter}</Link>
-            </div>
+            </Button>
         );
     });
     return (

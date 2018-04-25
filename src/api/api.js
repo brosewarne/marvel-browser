@@ -6,10 +6,27 @@
  * @param {Function} cb - A callback to call on a successful request
  * @returns {Promise} - A promise that returns the response JSON
  */
-export const characterSearch = (query, cb) => {
+export const characterSearchStartsWith = (query, cb) => {
     const apiKey = '7c5e370a062cbbf21f904fb64863aa55';
     const baseUrl = 'https://gateway.marvel.com:443/v1/public/characters';
     const url = `${baseUrl}?${query}&apikey=${apiKey}`;
+    return fetch(url, {
+        accept: 'application/json'
+    })
+        .then(checkStatus)
+        .then(response => response.json());
+};
+
+export const randomSearch = (itemType) => {
+    const totals = {
+        characters: 1491,
+        comics: 41694,
+        series: 10071
+    };
+    const itemNumber = Math.floor(Math.random() * totals[itemType]);
+    const apiKey = '7c5e370a062cbbf21f904fb64863aa55';
+    const baseUrl = `https://gateway.marvel.com:443/v1/public/${itemType}`;
+    const url = `${baseUrl}?limit=1&offset=${itemNumber}&apikey=${apiKey}`;
     return fetch(url, {
         accept: 'application/json'
     })

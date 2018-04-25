@@ -3,7 +3,7 @@ import { shallow, configure } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
 
-import { CharacterImage } from '../character_image';
+import { CharacterImage } from '../../characters/character_image';
 
 configure({ adapter: new Adapter() });
 

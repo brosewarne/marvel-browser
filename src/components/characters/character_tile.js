@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { CharacterImage } from './character_image';
+import Paper from 'material-ui/Paper';
+
+import { ItemImage } from '../items/item_image';
 
 import './character.css';
 
@@ -13,10 +15,10 @@ import './character.css';
  * @constructor
  */
 export const CharacterTile = ({ character, imgSize = 'portrait_medium' }) => {
-    const characterImage = <CharacterImage imgSize={imgSize} character={character} />;
+    const characterImage = <ItemImage imgSize={imgSize} item={character} />;
     const href = `/character/${character.id}`;
     return (
-        <div className="characterTile" key={`${character.id}_tile`}>
+        <Paper zDepth={4} className="characterTile" key={`${character.id}_tile`}>
             <h1 className="characterTitle">{character.name}</h1>
             <Link
                 href={href}
@@ -25,7 +27,7 @@ export const CharacterTile = ({ character, imgSize = 'portrait_medium' }) => {
             >
                 {characterImage}
             </Link>
-        </div>
+        </Paper>
     );
 };
 

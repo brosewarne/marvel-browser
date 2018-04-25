@@ -3,18 +3,19 @@
 exports[`<CharacterPage /> renders correctly 1`] = `
 <div>
   <content
-    className="characterPage"
+    className="pageContainer"
   >
     <div
-      className="characterProfile"
+      className="itemProfile"
     >
       <h1
-        className="characterProfileTitle"
+        className="itemProfileTitle"
       >
         Abomination
       </h1>
       <Component
-        character={
+        imgSize="portrait_uncanny"
+        item={
           Object {
             "comics": Object {
               "available": 10,
@@ -34,7 +35,6 @@ exports[`<CharacterPage /> renders correctly 1`] = `
             },
           }
         }
-        imgSize="portrait_uncanny"
       />
       <p>
         He's an abomination
