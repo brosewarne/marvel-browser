@@ -49,12 +49,29 @@ class HomePage extends Component {
     /**
      * Run a 'randomSearch' API call for the selected featureType
      */
-    componentWillMount = () => {
+    runRandomSearch = () => {
         randomSearch(this.state.featureType).then((response) => {
             this.setState({
                 loading: false,
                 featuredItem: response.data.results[0]
             });
+        });
+    };
+
+    /**
+     * Run a 'randomSearch' API call for the selected featureType when the page first mounts
+     */
+    componentWillMount = () => {
+        this.runRandomSearch();
+    };
+
+    /**
+     * Run a 'randomSearch' API call for the selected featureType when the props change
+     * @param {Object} nextProps - The incoming set of props
+     */
+    componentWillReceiveProps = (nextProps) => {
+        this.setState({ loading: true, featureType: nextProps.featureType }, () => {
+            this.runRandomSearch();
         });
     };
 
