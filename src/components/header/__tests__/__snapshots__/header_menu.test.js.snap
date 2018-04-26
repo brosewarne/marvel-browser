@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderMenu /> renders correctly 1`] = `
+<React.Fragment>
+  <WithStyles(Button)
+    aria-haspopup="true"
+    aria-owns={null}
+    color="secondary"
+    onClick={[Function]}
+    variant="raised"
+  >
+    ManuName
+  </WithStyles(Button)>
+  <WithStyles(Menu)
+    anchorEl={null}
+    id="simple-menu"
+    open={false}
+  >
+    <WithStyles(MenuItem)
+      onClick={[Function]}
+    >
+      <Link
+        href="/ahref"
+        replace={false}
+        to={
+          Object {
+            "pathname": "/ahref",
+          }
+        }
+      >
+        <WithStyles(Typography)
+          align="center"
+          color="primary"
+          variant="subheading"
+        >
+          option1
+        </WithStyles(Typography)>
+      </Link>
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      onClick={[Function]}
+    >
+      <Link
+        href="/bhref"
+        replace={false}
+        to={
+          Object {
+            "pathname": "/bhref",
+          }
+        }
+      >
+        <WithStyles(Typography)
+          align="center"
+          color="primary"
+          variant="subheading"
+        >
+          option2
+        </WithStyles(Typography)>
+      </Link>
+    </WithStyles(MenuItem)>
+  </WithStyles(Menu)>
+</React.Fragment>
+`;

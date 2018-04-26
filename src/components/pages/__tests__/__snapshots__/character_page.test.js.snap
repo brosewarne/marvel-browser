@@ -1,12 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CharacterPage /> renders correctly 1`] = `
+exports[`<_CharacterPage /> renders correctly 1`] = `
 <div>
   <content
     className="pageContainer"
   >
-    <div
+    <WithStyles(Paper)
       className="itemProfile"
+      elevation={12}
     >
       <h1
         className="itemProfileTitle"
@@ -33,22 +34,46 @@ exports[`<CharacterPage /> renders correctly 1`] = `
               "extension": "png",
               "path": "/a/href/to/an/image",
             },
+            "urls": Array [
+              Object {
+                "type": "wiki",
+                "url": "/aURL",
+              },
+            ],
           }
         }
       />
-      <p>
-        He's an abomination
-      </p>
-      <p>
-        10 Comics
-      </p>
-      <p>
-        2 Series
-      </p>
-      <p>
-        5 Stories
-      </p>
-    </div>
+      <WithStyles(Typography)
+        align="center"
+        variant="body2"
+      >
+        <p>
+          He's an abomination
+        </p>
+        <p>
+          10 Comics
+        </p>
+        <p>
+          2 Series
+        </p>
+        <p>
+          5 Stories
+        </p>
+      </WithStyles(Typography)>
+      <WithStyles(Button)
+        color="secondary"
+        variant="raised"
+      >
+        <Link
+          href="/aURL"
+          replace={false}
+          target="_blank"
+          to="/aURL"
+        >
+          Wiki
+        </Link>
+      </WithStyles(Button)>
+    </WithStyles(Paper)>
   </content>
 </div>
 `;

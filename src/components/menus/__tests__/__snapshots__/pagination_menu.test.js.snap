@@ -1,12 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PaginationMenu /> renders correctly 1`] = `
+exports[`<PaginationMenu /> renders correctly when loading is false 1`] = `
 <div
   className="menu"
 >
-  <div
-    className="menuTile"
+  <WithStyles(Button)
+    color="primary"
     key="pagination_div_0"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/A/1"
@@ -16,10 +18,12 @@ exports[`<PaginationMenu /> renders correctly 1`] = `
     >
       1
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="pagination_div_1"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/A/2"
@@ -29,10 +33,12 @@ exports[`<PaginationMenu /> renders correctly 1`] = `
     >
       2
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="pagination_div_2"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/A/3"
@@ -42,10 +48,12 @@ exports[`<PaginationMenu /> renders correctly 1`] = `
     >
       3
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="pagination_div_3"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/A/4"
@@ -55,10 +63,12 @@ exports[`<PaginationMenu /> renders correctly 1`] = `
     >
       4
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="pagination_div_4"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/A/5"
@@ -68,10 +78,12 @@ exports[`<PaginationMenu /> renders correctly 1`] = `
     >
       5
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="pagination_div_5"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/A/6"
@@ -81,10 +93,12 @@ exports[`<PaginationMenu /> renders correctly 1`] = `
     >
       6
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="pagination_div_6"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/A/7"
@@ -94,10 +108,12 @@ exports[`<PaginationMenu /> renders correctly 1`] = `
     >
       7
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="pagination_div_7"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/A/8"
@@ -107,10 +123,12 @@ exports[`<PaginationMenu /> renders correctly 1`] = `
     >
       8
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="pagination_div_8"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/A/9"
@@ -120,10 +138,12 @@ exports[`<PaginationMenu /> renders correctly 1`] = `
     >
       9
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="pagination_div_9"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/A/10"
@@ -133,10 +153,12 @@ exports[`<PaginationMenu /> renders correctly 1`] = `
     >
       10
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="pagination_div_10"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/A/11"
@@ -146,10 +168,12 @@ exports[`<PaginationMenu /> renders correctly 1`] = `
     >
       11
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="pagination_div_11"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/A/12"
@@ -159,10 +183,12 @@ exports[`<PaginationMenu /> renders correctly 1`] = `
     >
       12
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="pagination_div_12"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/A/13"
@@ -172,10 +198,12 @@ exports[`<PaginationMenu /> renders correctly 1`] = `
     >
       13
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="pagination_div_13"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/A/14"
@@ -185,10 +213,12 @@ exports[`<PaginationMenu /> renders correctly 1`] = `
     >
       14
     </Link>
-  </div>
-  <div
-    className="menuTile"
+  </WithStyles(Button)>
+  <WithStyles(Button)
+    color="primary"
     key="pagination_div_14"
+    size="small"
+    variant="raised"
   >
     <Link
       href="/characters/A/15"
@@ -198,6 +228,6 @@ exports[`<PaginationMenu /> renders correctly 1`] = `
     >
       15
     </Link>
-  </div>
+  </WithStyles(Button)>
 </div>
 `;

@@ -6,26 +6,7 @@
     padding: 1rem;
 }
 
-.menuTile {
-    background: #3498db;
-    background-image: linear-gradient(to bottom, #3498db, #2980b9);
-    border-radius: 0.7rem;
-    font-family: Arial;
-    color: #ffffff;
-    font-size: 20px;
-    padding: 10px 10px 10px 10px;
-    text-decoration: none;
-    margin: 2rem;
-    min-width: 20px;
-}
-
-
-.menuTile a {
-    text-decoration: none;
-}
-
-.menuTile:hover {
-    background: #3cb0fd;
-    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-    text-decoration: none;
+.menuItem {
+    padding-right: 1rem;
+    min-width: 1rem;
 }

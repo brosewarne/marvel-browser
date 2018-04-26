@@ -3,13 +3,13 @@ import { shallow, mount, configure } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
 
-import { CharacterGrid } from '../character_grid';
+import { ItemGrid } from '../item_grid';
 
 configure({ adapter: new Adapter() });
 
-describe('<CharacterGrid />', () => {
-    // no need to use real CharacterTitle components here.
-    const mockCharacterTiles = [
+describe('<ItemGrid />', () => {
+    // no need to use real ItemTile components here.
+    const mockItemTiles = [
         <span key="c1">Character 1</span>,
         <span key="c2">Character 2</span>,
         <span key="c3">Character 3</span>,
@@ -24,23 +24,23 @@ describe('<CharacterGrid />', () => {
 
     it('renders correctly', () => {
         const wrapper = shallow(
-            <CharacterGrid characterTiles={mockCharacterTiles} />
+            <ItemGrid itemTiles={mockItemTiles} />
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders 4 character rows', () => {
         const wrapper = mount(
-            <CharacterGrid characterTiles={mockCharacterTiles} />
+            <ItemGrid itemTiles={mockItemTiles} />
         );
-        expect(wrapper.find('.characterRow')).toHaveLength(4);
+        expect(wrapper.find('.itemRow')).toHaveLength(4);
     });
 
     it('renders 3 characters per row until the last row', () => {
         const wrapper = mount(
-            <CharacterGrid characterTiles={mockCharacterTiles} />
+            <ItemGrid itemTiles={mockItemTiles} />
         );
-        expect(wrapper.find('.characterRow').first().children()).toHaveLength(3);
-        expect(wrapper.find('.characterRow').last().children()).toHaveLength(1);
+        expect(wrapper.find('.itemRow').first().children()).toHaveLength(3);
+        expect(wrapper.find('.itemRow').last().children()).toHaveLength(1);
     });
 });

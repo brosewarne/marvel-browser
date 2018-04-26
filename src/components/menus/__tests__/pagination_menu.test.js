@@ -8,16 +8,23 @@ import { PaginationMenu } from '../pagination_menu';
 configure({ adapter: new Adapter() });
 
 describe('<PaginationMenu />', () => {
-    it('renders correctly', () => {
+    it('renders correctly when loading is false', () => {
         const wrapper = shallow(
-            <PaginationMenu totalPages={15} startsWith="A" />
+            <PaginationMenu totalPages={15} startsWith="A" loading={false} />
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('doesn\'t render if totalPages is 0', () => {
         const wrapper = shallow(
-            <PaginationMenu totalPages={0} startsWith="A" />
+            <PaginationMenu totalPages={0} startsWith="A" loading={false} />
+        );
+        expect(toJson(wrapper)).toBeFalsy();
+    });
+
+    it('doesn\'t render if loading is true', () => {
+        const wrapper = shallow(
+            <PaginationMenu totalPages={0} startsWith="A" loading />
         );
         expect(toJson(wrapper)).toBeFalsy();
     });

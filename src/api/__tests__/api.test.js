@@ -2,27 +2,27 @@ import React from 'react';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import { characterSearchStartsWith } from '../api';
+import { itemSearchStartsWith } from '../api';
 
 configure({ adapter: new Adapter() });
 
 const mockResponse = (status, statusText, response) => {
     return {
-        body: JSON.stringify(response),
         status,
         statusText,
         headers: {
             'Content-type': 'application/json'
-        }
+        },
+        json: () => { return response; }
     };
 };
 
-describe('characterSearchStartsWith()', () => {
-    it('returns the response for 20X HTTP statuses', () => {
+describe('itemSearchStartsWith()', () => {
+    it('returns the response for 20X HTTP statuses for characters', () => {
         window.fetch = jest.fn().mockImplementation(() => Promise.resolve(
             mockResponse(200, null, ['char1', 'char2'])));
         const query = 'nameStartsWith=A&limit=9&offset=0';
-        characterSearchStartsWith(query).then((response) => {
+        itemSearchStartsWith('characters', query).then((response) => {
             expect(response).toEqual(['char1', 'char2']);
         });
     });
@@ -31,7 +31,7 @@ describe('characterSearchStartsWith()', () => {
         window.fetch = jest.fn().mockImplementation(() => Promise.resolve(
             mockResponse(302, null, ['char1', 'char2'])));
         const query = 'nameStartsWith=A&limit=9&offset=0';
-        characterSearchStartsWith(query).then((response) => {
+        itemSearchStartsWith('characters', query).then((response) => {
             expect(response).toEqual(['char1', 'char2']);
         });
     });
@@ -40,8 +40,27 @@ describe('characterSearchStartsWith()', () => {
         window.fetch = jest.fn().mockImplementation(() => Promise.resolve(
             mockResponse(400, 'Bad Request', 'the passed query is invalid')));
         const query = 'nameStartsWith=A&limit=9&offset=0';
-        characterSearchStartsWith(query).then((response) => {
+        itemSearchStartsWith('characters', query).then((response) => {
             expect(response).toEqual('the passed query is invalid\'');
         });
     });
+
+    it('returns the response for 20X HTTP statuses for comics', () => {
+        window.fetch = jest.fn().mockImplementation(() => Promise.resolve(
+            mockResponse(200, null, ['c1', 'c2'])));
+        const query = 'nameStartsWith=A&limit=9&offset=0';
+        itemSearchStartsWith('comics', query).then((response) => {
+            expect(response).toEqual(['c1', 'c2']);
+        });
+    });
+
+    it('returns the response for 20X HTTP statuses for series', () => {
+        window.fetch = jest.fn().mockImplementation(() => Promise.resolve(
+            mockResponse(200, null, ['s1', 's2'])));
+        const query = 'nameStartsWith=A&limit=9&offset=0';
+        itemSearchStartsWith('series', query).then((response) => {
+            expect(response).toEqual(['s1', 's2']);
+        });
+    });
+
 });

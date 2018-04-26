@@ -1,12 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ComicPage /> renders correctly 1`] = `
+exports[`<_ComicPage /> renders correctly 1`] = `
 <div>
   <content
     className="pageContainer"
   >
-    <div
+    <WithStyles(Paper)
       className="itemProfile"
+      elevation={12}
     >
       <h1
         className="itemProfileTitle"
@@ -23,13 +24,19 @@ exports[`<ComicPage /> renders correctly 1`] = `
               "path": "/a/href/to/an/image",
             },
             "title": "Comic Title",
+            "urls": Array [
+              Object {
+                "type": "wiki",
+                "url": "/aURL",
+              },
+            ],
           }
         }
       />
       <p>
         Comic Description
       </p>
-    </div>
+    </WithStyles(Paper)>
   </content>
 </div>
 `;

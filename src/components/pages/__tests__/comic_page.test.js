@@ -3,23 +3,28 @@ import { shallow, configure } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
 
-import { ComicPage } from '../comic_page';
+import { _ComicPage } from '../comic_page';
 
 configure({ adapter: new Adapter() });
 
-describe('<ComicPage />', () => {
+describe('<_ComicPage />', () => {
     const mockComic = {
         title: 'Comic Title',
         description: 'Comic Description',
         thumbnail: {
             path: '/a/href/to/an/image',
             extension: 'png'
-        }
+        },
+        urls: [
+            {
+                url: '/aURL',
+                type: 'wiki'
+            }
+        ]
     };
     it('renders correctly', () => {
-        const location = { state: { data: mockComic } };
         const wrapper = shallow(
-            <ComicPage location={location} />
+            <_ComicPage item={mockComic} />
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

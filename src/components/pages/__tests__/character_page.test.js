@@ -3,11 +3,11 @@ import { shallow, configure } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
 
-import { CharacterPage } from '../character_page';
+import { _CharacterPage } from '../character_page';
 
 configure({ adapter: new Adapter() });
 
-describe('<CharacterPage />', () => {
+describe('<_CharacterPage />', () => {
     const mockCharacter = {
         id: 1009146,
         name: 'Abomination',
@@ -24,12 +24,17 @@ describe('<CharacterPage />', () => {
         },
         stories: {
             available: 5
-        }
+        },
+        urls: [
+            {
+                url: '/aURL',
+                type: 'wiki'
+            }
+        ]
     };
     it('renders correctly', () => {
-        const location = { state: { data: mockCharacter } };
         const wrapper = shallow(
-            <CharacterPage location={location} />
+            <_CharacterPage item={mockCharacter} />
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

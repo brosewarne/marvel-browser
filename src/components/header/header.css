@@ -1,7 +1,7 @@
 .appHeader {
-    height: 80px;
-    padding: 10px;
+    padding-right: 10px;
     color: white;
+    text-align: center;
 }
 
 .appTitle {

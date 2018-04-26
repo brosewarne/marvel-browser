@@ -20,5 +20,5 @@ export const ItemImage = ({ item, imgSize = 'portrait_medium' }) => {
 
 ItemImage.propTypes = {
     item: PropTypes.object.isRequired,
-    imgSize: PropTypes.string.isRequired
+    imgSize: PropTypes.string
 };

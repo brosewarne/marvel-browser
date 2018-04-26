@@ -1,6 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import Paper from 'material-ui/Paper';
+import Typography from 'material-ui/Typography';
 
+import { getDetailLinks } from './utils';
 import { ItemImage } from '../items/item_image';
 
 import './pages.css';
@@ -11,28 +15,44 @@ import './pages.css';
  * @returns {Node} - The rendered CharacterPage
  * @constructor
  */
-export const CharacterPage = (props) => {
-    const { data } = props.location.state;
+export const _CharacterPage = (props) => {
     const {
-        name, description, comics, series, stories
-    } = data;
+        name, description, comics, series, stories, urls
+    } = props.item;
 
     return (
         <div>
             <content className="pageContainer">
-                <div className="itemProfile">
+                <Paper elevation={12} className="itemProfile">
                     <h1 className="itemProfileTitle">{name}</h1>
-                    <ItemImage item={data} imgSize="portrait_uncanny" />
-                    <p>{description || 'No character description available'}</p>
-                    <p>{`${comics.available} Comics`}</p>
-                    <p>{`${series.available} Series`}</p>
-                    <p>{`${stories.available} Stories`}</p>
-                </div>
+                    <ItemImage item={props.item} imgSize="portrait_uncanny" />
+                    <Typography align="center" variant="body2">
+                        <p>{description || 'No character description available'}</p>
+                        <p>{`${comics.available} Comics`}</p>
+                        <p>{`${series.available} Series`}</p>
+                        <p>{`${stories.available} Stories`}</p>
+                    </Typography>
+                    {getDetailLinks(props.item)}
+                </Paper>
             </content>
         </div>
     );
 };
 
-CharacterPage.propTypes = {
-    location: PropTypes.object.isRequired
+_CharacterPage.propTypes = {
+    item: PropTypes.object.isRequired
 };
+
+/**
+ * If item is not supplied from props, get it from the app state
+ * @param {Object} state - The current app state
+ * @param {Object} props - The incoming set of props
+ * @returns {Object} - Empty id item is already in props, otherwise, the mapped item from app state
+ */
+const mapStateToProps = (state, props) => {
+    return props.item ? {} : {
+        item: state.routing.location.state.item
+    };
+};
+
+export const CharacterPage = connect(mapStateToProps)(_CharacterPage);

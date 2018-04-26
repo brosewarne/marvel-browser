@@ -12,54 +12,32 @@ class Header extends Component {
     constructor(props) {
         super(props);
 
-        this.menuOptions = {
-            characters: [
-                {
-                    name: 'Search'
-                },
-                {
-                    name: 'Browse',
-                    href: '/characters/A/1'
-                },
-                {
-                    name: 'Random',
-                    href: '/characters/random'
-                }
-            ],
-            comics: [
-                {
-                    name: 'Search'
-                },
-                {
-                    name: 'Browse'
-                },
-                {
-                    name: 'Random',
-                    href: '/comics/random'
-                }
-            ],
-            series: [
-                {
-                    name: 'Search'
-                },
-                {
-                    name: 'Browse'
-                },
-                {
-                    name: 'Random',
-                    href: '/series/random'
-                }
-            ]
-        };
+        this.menuOptions = ['characters', 'comics', 'series'].reduce(
+            (allOptions, itemType) => {
+                // eslint-disable-next-line no-param-reassign
+                allOptions[itemType] = [
+                    {
+                        name: 'Search'
+                    },
+                    {
+                        name: 'Browse',
+                        href: `/${itemType}/A/1`
+                    },
+                    {
+                        name: 'Random',
+                        href: `/${itemType}/random`
+                    }
+                ];
+                return allOptions;
+            }, {});
     }
 
     render = () => {
-        const href = '/characters/A/1';
         return (
             <AppBar position="static">
                 <Toolbar>
-                    <Typography variant="headline" color="primary" className="appHeader" align="center">
-                        <Link to={href} href={href}>
+                    <Typography color="primary" className="appHeader" align="center">
+                        <Link to="/" href="/">
                             <h1 className="appTitle">Marvel Browser</h1>
                         </Link>
                     </Typography>

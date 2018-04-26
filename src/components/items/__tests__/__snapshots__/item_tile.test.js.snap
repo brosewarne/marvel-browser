@@ -2,24 +2,24 @@
 
 exports[`<CharacterTile /> renders correctly 1`] = `
 <WithStyles(Paper)
-  className="characterTile"
+  className="itemTile"
+  elevation={12}
   key="1009146_tile"
-  zDepth={4}
 >
   <h1
-    className="characterTitle"
+    className="itemTitle"
   >
     Abomination
   </h1>
   <Link
-    href="/character/1009146"
+    href="/characters/id/1009146"
     replace={false}
     title="Click to see Abomination's profile"
     to={
       Object {
-        "pathname": "/character/1009146",
+        "pathname": "/characters/id/1009146",
         "state": Object {
-          "character": Object {
+          "item": Object {
             "id": 1009146,
             "name": "Abomination",
             "thumbnail": Object {

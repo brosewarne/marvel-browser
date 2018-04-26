@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CharacterGrid /> renders correctly 1`] = `
+exports[`<ItemGrid /> renders correctly 1`] = `
 <div
-  className="characterGrid"
+  className="itemGrid"
 >
   <div
-    className="characterRow"
-    key="characterRow_0"
+    className="itemRow"
+    key="itemRow_0"
   >
     <span
       key="c1"
@@ -25,8 +25,8 @@ exports[`<CharacterGrid /> renders correctly 1`] = `
     </span>
   </div>
   <div
-    className="characterRow"
-    key="characterRow_3"
+    className="itemRow"
+    key="itemRow_3"
   >
     <span
       key="c4"
@@ -45,8 +45,8 @@ exports[`<CharacterGrid /> renders correctly 1`] = `
     </span>
   </div>
   <div
-    className="characterRow"
-    key="characterRow_6"
+    className="itemRow"
+    key="itemRow_6"
   >
     <span
       key="c7"
@@ -65,8 +65,8 @@ exports[`<CharacterGrid /> renders correctly 1`] = `
     </span>
   </div>
   <div
-    className="characterRow"
-    key="characterRow_9"
+    className="itemRow"
+    key="itemRow_9"
   >
     <span
       key="c10"

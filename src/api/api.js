@@ -1,15 +1,57 @@
+
+// @todo: this seems a bit heavy handed, see where it ends up...
+const SEARCH_QUERIES = {
+    characters: {
+        startsWith: (startsWith, limit, offset) => {
+            return itemSearchStartsWith('characters', `nameStartsWith=${startsWith}&limit=${limit}&offset=${offset}`);
+        }
+    },
+    comics: {
+        startsWith: (startsWith, limit, offset) => {
+            return itemSearchStartsWith('comics', `titleStartsWith=${startsWith}&limit=${limit}&offset=${offset}`);
+        }
+    },
+    series: {
+        startsWith: (startsWith, limit, offset) => {
+            return itemSearchStartsWith('series', `titleStartsWith=${startsWith}&limit=${limit}&offset=${offset}`);
+        }
+    }
+};
+
+export const startsWithApiCall = (itemType, startsWith, limit, offset) => {
+    return SEARCH_QUERIES[itemType].startsWith(startsWith, limit, offset);
+};
+
 /**
  * Perform a character search using the marvel api with a public key, to get a list of characters based on the
  * starting letter of the character's name and the page limit and offset for pagination
+ * @param {String} itemType - character, comic or series
  * @param {String} query - The query string containing the starting letter , limit and offset -
  * eg: nameStartsWith=L&limit=9&offset=0
- * @param {Function} cb - A callback to call on a successful request
- * @returns {Promise} - A promise that returns the response JSON
+ * @returns {Promise} - A promise that returns the response JSON on a successful request
  */
-export const characterSearchStartsWith = (query, cb) => {
+export const itemSearchStartsWith = (itemType, query) => {
     const apiKey = '7c5e370a062cbbf21f904fb64863aa55';
-    const baseUrl = 'https://gateway.marvel.com:443/v1/public/characters';
+    const baseUrl = `https://gateway.marvel.com:443/v1/public/${itemType}`;
     const url = `${baseUrl}?${query}&apikey=${apiKey}`;
+    return fetch(url, {
+        accept: 'application/json'
+    })
+        .then(checkStatus)
+        .then(response => response.json());
+};
+
+/**
+ * Find an item bu it's ID
+ * CURRENTLY UNUSED, THIS WAS TO BE A PART OF SEARCHING FOR RELATED OOMICS AND CHARACTERS
+ * @param {String} itemType - The item type to search for
+ * @param {String} id - The id of the itemType to search for
+ * @returns {Promise} - A promise that returns the response JSON on a successful request
+ */
+export const itemSearchById = (itemType, id) => {
+    const apiKey = '7c5e370a062cbbf21f904fb64863aa55';
+    const baseUrl = `https://gateway.marvel.com:443/v1/public/${itemType}`;
+    const url = `${baseUrl}/${id}&apikey=${apiKey}`;
     return fetch(url, {
         accept: 'application/json'
     })

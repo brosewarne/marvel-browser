@@ -1,16 +1,16 @@
 import React from 'react';
-import { shallow, configure } from 'enzyme';
+import { shallow, mount, configure } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
 
-import { AlphabetMenu } from '../alphabet_menu';
+import { Header } from '../header';
 
 configure({ adapter: new Adapter() });
 
-describe('<AlphabetMenu />', () => {
+describe('<Header />', () => {
     it('renders correctly', () => {
         const wrapper = shallow(
-            <AlphabetMenu itemType="characters" />
+            <Header />
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

@@ -8,7 +8,8 @@ import { ComicPage } from './comic_page';
 import { SeriesPage } from './series_page';
 
 // @todo: move this svg and associated css
-import loading from '../characters/loading.svg';
+import loading from '../../loading.svg';
+import '../../App.css';
 
 class HomePage extends Component {
     static propTypes = {
@@ -99,7 +100,7 @@ class HomePage extends Component {
      */
     getFeaturedItemProfilePage = () => {
         const ComponentType = this.itemComponents[this.state.featureType];
-        return <ComponentType location={{ state: { data: this.state.featuredItem } }} />;
+        return <ComponentType item={this.state.featuredItem} />;
     };
 
     render() {

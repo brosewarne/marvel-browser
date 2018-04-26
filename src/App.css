@@ -1,4 +1,15 @@
 .app {
-  text-align: center;
+    text-align: center;
+    background-color: #f3f3f3;
+    min-height: 1000px;
 }
 
+.loadingSpinner {
+  width: 200px;
+  height: 200px;
+}
+
+@keyframes loadingSpinner {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

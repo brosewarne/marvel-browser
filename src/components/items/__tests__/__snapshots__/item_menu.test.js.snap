@@ -1,24 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CharacterMenu /> renders the loaded page correctly 1`] = `
+exports[`<ItemMenu /> renders the loaded page correctly 1`] = `
 <div>
   <section>
     <Component
-      dispatch={[MockFunction]}
+      itemType="characters"
     />
   </section>
   <content>
-    <strong>
-      Page 
-      1
-       of 
-      10
-    </strong>
+    <WithStyles(Typography)
+      variant="headline"
+    >
+      <strong>
+        Browsing 
+        A
+         
+        characters
+         - Page 
+        1
+         of 
+        10
+      </strong>
+    </WithStyles(Typography)>
     <Component
-      characterTiles={
+      itemTiles={
         Array [
           <Unknown
-            character={
+            item={
               Object {
                 "id": 0,
                 "name": "Character_0",
@@ -28,9 +36,10 @@ exports[`<CharacterMenu /> renders the loaded page correctly 1`] = `
                 },
               }
             }
+            itemType="characters"
           />,
           <Unknown
-            character={
+            item={
               Object {
                 "id": 1,
                 "name": "Character_1",
@@ -40,9 +49,10 @@ exports[`<CharacterMenu /> renders the loaded page correctly 1`] = `
                 },
               }
             }
+            itemType="characters"
           />,
           <Unknown
-            character={
+            item={
               Object {
                 "id": 2,
                 "name": "Character_2",
@@ -52,9 +62,10 @@ exports[`<CharacterMenu /> renders the loaded page correctly 1`] = `
                 },
               }
             }
+            itemType="characters"
           />,
           <Unknown
-            character={
+            item={
               Object {
                 "id": 3,
                 "name": "Character_3",
@@ -64,9 +75,10 @@ exports[`<CharacterMenu /> renders the loaded page correctly 1`] = `
                 },
               }
             }
+            itemType="characters"
           />,
           <Unknown
-            character={
+            item={
               Object {
                 "id": 4,
                 "name": "Character_4",
@@ -76,9 +88,10 @@ exports[`<CharacterMenu /> renders the loaded page correctly 1`] = `
                 },
               }
             }
+            itemType="characters"
           />,
           <Unknown
-            character={
+            item={
               Object {
                 "id": 5,
                 "name": "Character_5",
@@ -88,9 +101,10 @@ exports[`<CharacterMenu /> renders the loaded page correctly 1`] = `
                 },
               }
             }
+            itemType="characters"
           />,
           <Unknown
-            character={
+            item={
               Object {
                 "id": 6,
                 "name": "Character_6",
@@ -100,9 +114,10 @@ exports[`<CharacterMenu /> renders the loaded page correctly 1`] = `
                 },
               }
             }
+            itemType="characters"
           />,
           <Unknown
-            character={
+            item={
               Object {
                 "id": 7,
                 "name": "Character_7",
@@ -112,9 +127,10 @@ exports[`<CharacterMenu /> renders the loaded page correctly 1`] = `
                 },
               }
             }
+            itemType="characters"
           />,
           <Unknown
-            character={
+            item={
               Object {
                 "id": 8,
                 "name": "Character_8",
@@ -124,9 +140,10 @@ exports[`<CharacterMenu /> renders the loaded page correctly 1`] = `
                 },
               }
             }
+            itemType="characters"
           />,
           <Unknown
-            character={
+            item={
               Object {
                 "id": 9,
                 "name": "Character_9",
@@ -136,11 +153,13 @@ exports[`<CharacterMenu /> renders the loaded page correctly 1`] = `
                 },
               }
             }
+            itemType="characters"
           />,
         ]
       }
     />
     <Component
+      loading={false}
       startsWith="A"
       totalPages={10}
     />
@@ -148,23 +167,19 @@ exports[`<CharacterMenu /> renders the loaded page correctly 1`] = `
 </div>
 `;
 
-exports[`<CharacterMenu /> renders the loading spinner correctly 1`] = `
+exports[`<ItemMenu /> renders the loading spinner correctly 1`] = `
 <div>
   <section>
     <Component
-      dispatch={[MockFunction]}
+      itemType="characters"
     />
   </section>
   <content>
-    <strong>
-      Page 
-      1
-       of 
-      0
-    </strong>
     <div>
       <h1>
-        LOADING CHARACTERS.....
+        LOADING 
+        CHARACTERS
+        .....
       </h1>
       <div>
         <img
@@ -175,6 +190,7 @@ exports[`<CharacterMenu /> renders the loading spinner correctly 1`] = `
       </div>
     </div>
     <Component
+      loading={true}
       startsWith="A"
       totalPages={0}
     />
